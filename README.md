@@ -29,18 +29,42 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+Search input with autocomplete
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The UI/UX designer decided that search by account input needs to be more user-friendly.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+They have their mind made on a ‘simple’ autocomplete search box.
+What’s not so simple and not obvious to the designer,
+is that you have a huge dataset of possible results that would
+not be feasible to store on the client side.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Your task is to create a component that listens to user input events and shows
+a list of possible matches.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Task 1:
 
-## Learn More
+Write a search box component with autocomplete.
+The list of possible options is on the client’s side.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Task 2:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The designer wants the list to only show the accounts that start with
+the search term entered by the user. Moreover he has a desire to highlight matches
+in the list of results.
+
+Task 3:
+
+As you remember you store a list of options on the client’s side.
+This list can be really huge. How to avoid glitches and delays?
+Please, improve the performance of your component if it is needed.
+
+Task 4:
+
+Unfortunately some users can have more than 1 mln accounts.
+As a result the request for such options list is too slow.
+Please, add an opportunity to work with your component in asynchronous mode.
+
+Task 5:
+
+Some requests for options list can fail.
+The designer would like to give feedback to users in that case.
